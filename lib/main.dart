@@ -7,11 +7,36 @@ void main() => runApp(MaterialApp(
       centerTitle:true, 
       backgroundColor: Colors.red[600],
     ),//AppBar
-    body:Container(
-      padding: EdgeInsets.symmetric(horizontal:20.0,vertical: 10.0),
-      margin:EdgeInsets.all(30.0),
+    body:Column(
+      mainAxisAlignment: MainAxisAlignment.start,
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: <Widget>[
+        Row(children: <Widget>[
+          Text('Hello,'),
+          Text('World'),
+        ],),
+        Container(
+          padding: EdgeInsets.all(20.0),
+          color:Colors.cyan,
+          child: Text('one'),
+        ),
+        Container(
+          padding: EdgeInsets.all(30.0),
+          color:Colors.pink,
+          child: Text('Two'),
+        ),
+          Container(
+          padding: EdgeInsets.all(40.0),
+          color:Colors.amber,
+          child: Text('Three'),
+        ),
+          
+          
+    Container(
+      padding:EdgeInsets.all(30.0),
       color:Colors.grey[400],
-      child:Text('Hello Developer')
+      child:Text('Hello Developer'),)
+      ],
     ),//center
     floatingActionButton: FloatingActionButton(
       onPressed: (){print('You clicked me');},
